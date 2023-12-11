@@ -1,0 +1,3 @@
+#lightningout .brand-accessible[c-lightningOutTestCMP_lightningOutTestCMP] {
+    color: var(--lwc-colorBackgroundHighlight);
+}

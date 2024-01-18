@@ -25,6 +25,26 @@
       );
     </script>
 
+    <iframe src="data:text/html;charset=utf-8,<head>
+      <meta http-equiv='Content-Security-Policy' content=&quot;default-src 'none'; script-src 'none'; style-src 'none';&quot;
+      </head>
+      <body>
+      &amp;lt;meta CSP=default-src 'none'; script-src 'none'; style-src 'none';&amp;gt;
+      <br>
+      <iframe srcdoc=&quot;<head></head>
+      <body>
+       content over <em>srcdoc=</em>: <span  style='color:blue;'>this should be in blue</span>
+       <br>
+       some content inserted over JS: <span id='span'><font color='silver'>failed</font></span>
+       <script>
+         document.getElementById('span').innerHTML = 'Done!';
+         document.getElementById('span').style.color = 'green';
+       </script>
+      </body>
+      &quot; width=300 height=80></iframe>
+      <body>
+      " width=400 height=150></iframe>
+
     <!--<iframe src="https://miso-flatwhite-181.my.localhost.sfdcdev.site.com:7443/c/exampleComponentLOApp.app" id="damoFrame"></iframe>-->
   </body>
 </html>

@@ -7,7 +7,8 @@
   <body>
     <div ng-app="myApp" ng-controller="myCtrl">
     <p>Lightning Out App Test</p> 
-    <div id="lightningout"></div>
+    <div id="lightningout1"></div>
+    <div id="lightningout2"></div>
       <script>
       $Lightning.use(
         'c:exampleComponentLOApp',
@@ -15,7 +16,7 @@
           $Lightning.createComponent(
             'c:lightningOutTestCMP',
             {},
-            'lightningout',
+            'lightningout1',
             function (cmp) {
                 console.log('Lightning Out App loaded!!!');
             }
@@ -31,7 +32,7 @@
           $Lightning.createComponent(
             'c:lightningOutTestCMP',
             {},
-            'lightningout',
+            'lightningout2',
             function (cmp) {
                 console.log('Lightning Out App loaded!!!');
             }

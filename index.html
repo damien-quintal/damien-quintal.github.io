@@ -6,6 +6,17 @@
   </head>
   <body>
     <div ng-app="myApp" ng-controller="myCtrl">
+    <div id="lightningout"></div>
+    <script>
+      $Lightning.outIframe(
+        'c:exampleComponentLOApp',
+        {
+          rootNodeId: "lightningout"
+        },
+        function () {},
+        'https://efficiency-computing-2761-dev-ed.scratch.my.site.com'
+      );
+    </script>
     <!--<p>Lightning Out App Test</p> 
     <div id="lightningout1"></div>
     <div id="lightningout2"></div>
@@ -60,7 +71,6 @@
 &quot; width=300 height=80></iframe>
 <body>
 " width=400 height=150></iframe>-->
-
     <iframe src="https://efficiency-computing-2761-dev-ed.scratch.my.site.com/c/exampleComponentLOApp.app" id="damoFrame"></iframe>
   </body>
 </html>

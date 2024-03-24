@@ -3,7 +3,7 @@
   <head>
     <!--<script src='https://miso-flatwhite-181.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.js'></script>-->
     <!--<script src='https://miso-flatwhite-181.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.js'></script>-->
-    <script src='https://enterprise-platform-21312-dev-ed.scratch.my.site.com/lightning/lightning.out.js'></script>
+    <script src='https://dx2000000xcx3mao.test8.my.pc-rnd.site.com/lout/lightning/lightning.out.js'></script>
   </head>
   <body>
     <div ng-app="myApp" ng-controller="myCtrl">
@@ -11,19 +11,21 @@
     <div id="lightningout1"></div>
     <script>
       $Lightning.use(
-        'c:loapp',
-        function () {
-          $Lightning.createComponent(
-            'c:lightningOutTestCMP',
-            {},
-            'lightningout1',
-            function (cmp) {
-                console.log('Lightning Out App 1 loaded!!!');
-            }
-          );
-        },
-        'https://enterprise-platform-21312-dev-ed.scratch.my.site.com'
-      );
+            'c:exampleComponentLOApp2', // name of the Lightning app
+            () => {
+              // Callback once framework and app loaded
+              $Lightning.createComponent(
+                'c:loForm', // top-level component of your app
+                {}, // attributes to set on the component when created
+                'lightningoutholder', // the DOM location to insert the component
+                (cmp) => {
+                  // callback when component is created and active on the page
+                },
+    )
+  },
+            'https://dx2000000xcx3mao.test8.my.pc-rnd.site.com/lout',
+            '00DX2000000XCX3!AQEAQOMixYZ_1DNETZBGeNTR0D9yNnlnw35Hmlq3m8pBzvmdVrFDvdSz7Xy2Zgaf33JZCZjA5u_6SXAhr.bcA.sp1bHY.TMW',
+);
     </script>
   </body>
 </html>

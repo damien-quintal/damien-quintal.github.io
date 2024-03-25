@@ -3,13 +3,13 @@
   <head>
     <!--<script src='https://miso-flatwhite-181.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.js'></script>-->
     <!--<script src='https://miso-flatwhite-181.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.js'></script>-->
-    <script src='https://loutiframetdx.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.js'></script>
+    <!--<script src='https://loutiframetdx.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.js'></script>-->
   </head>
   <body>
     <div ng-app="myApp" ng-controller="myCtrl">
     <p>Lightning Out App Test</p>
     <div id="lightningout1"></div>
-    <script>
+    <!--<script>
       $Lightning.use(
             'c:exampleComponentLOApp2', // name of the Lightning app
             () => {
@@ -24,9 +24,15 @@
                 },
     )
   },
-            'https://loutiframetdx.my.localhost.sfdcdev.site.com:7443',
+            'https://loutiframetdx.lightning.localhost.sfdcdev.force.com:7443',
             '00Dxx0000006Gz1!AQEAQFTqVJkXSd5hLOnskm8Q_i53929_PaUIoHDUt8.5UyUsdb7ckgOGV2MXzdP57jLoXU8brlUMlna3BiS5AYrcTnF.zs98'
 );
-    </script>
+    </script>-->
+    <script async src="https://loutiframetdx.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.3.js"></script>
+        <script>
+            document.addEventListener('LightningOutLoaded', e => alert(`${e.detail.application} is loaded.`));
+            ($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp2', 'https://loutiframetdx.lightning.localhost.sfdcdev.force.com:7443', {}, null, document.getElementById('lightningout1'),
+              new Promise(myResolve => myResolve('00Dxx0000006Gz1!00Dxx0000006Gz1!AQEAQO4Sth.xXhOVm2i6cbVdY01y3ISJmpQcN27hDSo4.CLCVuWIdsDJg6LBbaiyFh_BSEobv7q9W__uOOWuEfC77TQE9RVN'))]
+        </script>
   </body>
 </html>

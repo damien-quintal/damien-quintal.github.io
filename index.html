@@ -9,7 +9,7 @@
     <div ng-app="myApp" ng-controller="myCtrl">
     <p>Lightning Out App Test</p>
     <div id="lightningout1"></div>
-    <script>
+    <!--<script>
       $Lightning.use(
             'c:exampleComponentLOApp2', // name of the Lightning app
             () => {
@@ -28,11 +28,11 @@
             '00Dxx0000006Hn1!AQEAQIJ9cfs3ff9P4IkxCIK6b3Q1y4JTou1OjYQF3mDtykgvQHWcy29AoQ.riQFnbEmZNaqaIilSxxQC_l3Uip44CQshd6Nf'
             //
 );
-    </script>
-    <!--<script async src="https://authlout1.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.3.js"></script>
+    </script>-->
+    <script async src="https://authlout1.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.3.js"></script>
         <script>
             document.addEventListener('LightningOutLoaded', e => alert(`${e.detail.application} is loaded.`));
             ($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', {}, null, document.getElementById('lightningout1'), new Promise((myResolve) => myResolve("00Dxx0000006Hn1!AQEAQIJ9cfs3ff9P4IkxCIK6b3Q1y4JTou1OjYQF3mDtykgvQHWcy29AoQ.riQFnbEmZNaqaIilSxxQC_l3Uip44CQshd6Nf"))]
-        </script>-->
+        </script>
   </body>
 </html>

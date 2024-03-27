@@ -3,13 +3,13 @@
   <head>
     <!--<script src='https://miso-flatwhite-181.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.js'></script>-->
     <!--<script src='https://miso-flatwhite-181.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.js'></script>-->
-    <script src='https://authlout1.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.js'></script>
+    <!--<script src='https://authlout1.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.js'></script>-->
   </head>
   <body>
     <div ng-app="myApp" ng-controller="myCtrl">
     <p>Lightning Out App Test</p>
     <div id="lightningout1"></div>
-    <script>
+    <!--<script>
       $Lightning.use(
             'c:exampleComponentLOApp2', // name of the Lightning app
             () => {
@@ -28,11 +28,11 @@
             '00Dxx0000006Hn1!AQEAQK4fDEAf5PLyiV8OAl3.s_vhDmRlVNOEvjdZ47VBr.AzxMrCOrV9Zs.62AHJRN7Uji8xvyu53gG9VEvksHAeQ5cxFl4b'
             //
 );
-    </script>
-    <!--<script async src="https://authlout1.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.3.js"></script>
+    </script>-->
+    <script async src="https://authlout1.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.3.js"></script>
         <script>
             document.addEventListener('LightningOutLoaded', e => alert(`${e.detail.application} is loaded.`));
             ($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', {}, null, document.getElementById('lightningout1'), new Promise((myResolve) => myResolve("00Dxx0000006Hn1!AQEAQK4fDEAf5PLyiV8OAl3.s_vhDmRlVNOEvjdZ47VBr.AzxMrCOrV9Zs.62AHJRN7Uji8xvyu53gG9VEvksHAeQ5cxFl4b"))]
-        </script>-->
+        </script>
   </body>
 </html>

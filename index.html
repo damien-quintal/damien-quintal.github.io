@@ -210,9 +210,11 @@ function onClick(element) {
 }
 
 function loadIframe() {
-  document.addEventListener("wheee", e => console.log("damodamodamo", e));
+  
+  var elem = document.getElementById('lightningout1');
+  elem.addEventListener("wheee", e => console.log("damodamodamo", e));
   $Lightning.load(
-    'c:exampleComponentLOApp', 'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', {}, null, document.getElementById('lightningout1'), new Promise((myResolve) => myResolve("00Dxx0000006Hn1!AQEAQE.0odXytiqIsse4dIZJ3VVv6ejLL_iWU97T.8I.oEQd6UhEtThMntNFnSoaIPQbGVqLn12lyrDzdc4cckAA9QJ5Hq2n"))
+    'c:exampleComponentLOApp', 'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', {}, null, elem, new Promise((myResolve) => myResolve("00Dxx0000006Hn1!AQEAQKdSvMej3E7YTXDX5zc0kyOYwBO1SJc4Lo4VkEyV60myrhIq6sq5Liz20CHHld277xnz3.GnlWnfZbsHgaozl6d2xyVi"))
   );
   //($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', {}, null, document.getElementById('lightningout1'), new Promise((myResolve) => myResolve("00Dxx0000006Hn1!AQEAQE.0odXytiqIsse4dIZJ3VVv6ejLL_iWU97T.8I.oEQd6UhEtThMntNFnSoaIPQbGVqLn12lyrDzdc4cckAA9QJ5Hq2n"))]
 }

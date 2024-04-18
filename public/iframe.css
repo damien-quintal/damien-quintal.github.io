@@ -1,0 +1,45 @@
+/*
+ * Copyright 2024 salesforce.com, inc.
+ * All Rights Reserved
+ * Company Confidential
+ */
+
+ .lightning-input-field {
+    margin-top: 16px!important;
+    margin-bottom: 16px!important;
+}
+
+.lightning-input-field label {
+    font-size: 16px !important;
+    font-family: "Poppins", sans-serif;
+}
+
+.lightning-input-field input {
+    border: 1px solid #ccc!important;
+    padding: 10px;
+    display: block;
+    width: 95%;
+    border-radius: 8px;
+    margin-top:4px;
+}
+
+.lightning-button button {
+    color: #fff!important;
+    background-color: #f44336;
+    border-radius: 8px;
+    padding: 12px 24px!important;
+    margin-bottom: 16px!important;
+    text-align: center;
+    cursor: pointer;
+    white-space: nowrap;
+    vertical-align: middle;
+    overflow: hidden;
+    text-decoration: none;
+    border: none;
+    font-size: 16px;
+}
+
+.lightning-button button:hover {
+    color: #000!important;
+    background-color: #ccc!important;
+}

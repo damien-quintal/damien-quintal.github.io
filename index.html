@@ -210,7 +210,7 @@ function onClick(element) {
 }
 
 function loadIframe() {
-  
+  document.addEventListener("LightningOutLoaded", e => $Lightning.createComponent("c:lightningOutForm",{},"elemStore"));
   var elem = document.getElementById('lightningout1');
   elem.addEventListener("wheee", e => console.log("damodamodamo", e));
   $Lightning.load(

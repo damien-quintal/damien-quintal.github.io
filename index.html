@@ -193,15 +193,15 @@ body {font-size:16px;}
   function loadIframe() {
     //document.addEventListener("LightningOutLoaded", e => $Lightning.createComponent("c:lightningOutTestCMP",{},"elemStore"));
     var elem = document.getElementById('lightningout1');
-    $Lightning.use(
+    /*$Lightning.use(
       'c:exampleComponentLOApp', 
       'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', 
       {}, 
       'https://damien-quintal.github.io/public/iframe.css', 
       elem, 
       "00Dxx0000006Hn1!AQEAQJrhwCWYrYHozbrik1nohA56FePFENXaV70GcVTEaGodE4y_Tyy7PiTVI_a08k0TregiQeBFkaoBTlx.ZG6bzzWX3VfO"
-    );
-    //($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', {}, null, document.getElementById('lightningout1'), new Promise((myResolve) => myResolve("00Dxx0000006Hn1!AQEAQE.0odXytiqIsse4dIZJ3VVv6ejLL_iWU97T.8I.oEQd6UhEtThMntNFnSoaIPQbGVqLn12lyrDzdc4cckAA9QJ5Hq2n"))]
+    );*/
+    ($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', {}, null, document.getElementById('lightningout1')]
   }
 </script>
 

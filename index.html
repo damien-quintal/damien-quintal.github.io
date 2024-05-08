@@ -193,14 +193,14 @@ body {font-size:16px;}
   function loadIframe() {
     //document.addEventListener("LightningOutLoaded", e => $Lightning.createComponent("c:lightningOutTestCMP",{},"elemStore"));
     var elem = document.getElementById('lightningout1');
-    /*$Lightning.use(
+    $Lightning.use(
       'c:exampleComponentLOApp', 
-      'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', 
+      'https://authlout2.my.localhost.sfdcdev.site.com:7443', 
       {}, 
       'https://damien-quintal.github.io/public/iframe.css', 
       elem, 
-      "00Dxx0000006Hn1!AQEAQJrhwCWYrYHozbrik1nohA56FePFENXaV70GcVTEaGodE4y_Tyy7PiTVI_a08k0TregiQeBFkaoBTlx.ZG6bzzWX3VfO"
-    );*/
+      "00Dxx0000006HS3!AQEAQI3oKoym6PPnv6aW.JiXlkqc7Wd4nVx3AGk6Ak36APR0tNLW74sig88JDaPnLq1s_TjDMN2h4Jk8ogQoGshPDsL1_FSS"
+    );
     //($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout2.my.localhost.sfdcdev.site.com:7443', {}, null, document.getElementById('lightningout1')]
   }
 </script>
@@ -225,19 +225,11 @@ function onClick(element) {
   captionText.innerHTML = element.alt;
 }
 </script>
-<script async src="https://authlout1.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.iframe.js"></script>
+<script onload="loadIframe()" src="https://authlout1.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.iframe.js"></script>
 <script>
     //document.addEventListener("LightningOutLoaded", e => $Lightning.createComponent("c:lightningOutTestCMP",{},"elemStore"));
-    var elem = document.getElementById('lightningout1');
-    /*$Lightning.use(
-      'c:exampleComponentLOApp', 
-      'https://authlout1.lightning.localhost.sfdcdev.force.com:7443', 
-      {}, 
-      'https://damien-quintal.github.io/public/iframe.css', 
-      elem, 
-      "00Dxx0000006Hn1!AQEAQJrhwCWYrYHozbrik1nohA56FePFENXaV70GcVTEaGodE4y_Tyy7PiTVI_a08k0TregiQeBFkaoBTlx.ZG6bzzWX3VfO"
-    );*/
-    ($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout2.my.localhost.sfdcdev.site.com:7443', {}, "https://damien-quintal.github.io/public/iframe.css", document.getElementById('lightningout1'), new Promise((myResolve) => myResolve("00Dxx0000006HS3!AQEAQI3oKoym6PPnv6aW.JiXlkqc7Wd4nVx3AGk6Ak36APR0tNLW74sig88JDaPnLq1s_TjDMN2h4Jk8ogQoGshPDsL1_FSS"))]
+    
+    //($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout2.my.localhost.sfdcdev.site.com:7443', {}, "https://damien-quintal.github.io/public/iframe.css", document.getElementById('lightningout1'), new Promise((myResolve) => myResolve("00Dxx0000006HS3!AQEAQI3oKoym6PPnv6aW.JiXlkqc7Wd4nVx3AGk6Ak36APR0tNLW74sig88JDaPnLq1s_TjDMN2h4Jk8ogQoGshPDsL1_FSS"))]
 </script>
 </body>
 </html>

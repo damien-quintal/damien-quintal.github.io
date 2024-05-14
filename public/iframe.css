@@ -43,3 +43,14 @@
     color: #000!important;
     background-color: #ccc!important;
 }
+
+#bgimage {
+    background: url(https://www.w3schools.com/w3images/parallax1.jpg);
+	opacity: .75;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+    height: 400px;
+    width: 400px;
+}

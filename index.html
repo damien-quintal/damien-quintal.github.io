@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-<title>W3.CSS Template</title>
-</head>
-<body>
-
-  
-  <!-- Contact -->
-  <div id="lightningout1"></div>
-  <iframe id="testframe" src="https://250org-a.test1.my.pc-rnd.salesforce-sites.com/lwre/resource/1715198133000/umaform"></iframe>
-
-<!--<script>
-  function loadIframe() {
-    //document.addEventListener("LightningOutLoaded", e => $Lightning.createComponent("c:lightningOutTestCMP",{},"elemStore"));
-    var elem = document.getElementById('lightningout1');
-    $Lightning.use(
-      'c:exampleComponentLOApp', 
-      'https://authlout2.my.localhost.sfdcdev.site.com:7443', 
-      {}, 
-      'https://damien-quintal.github.io/public/iframe.css', 
-      elem,
-      '00Dxx0000006HS3!AQEAQJbl4nAtS1D78OM5rqCZjYoZlh_gG7kJyGq5irg8R53sTPoAq51CdGnqWnUi_4UhYJR_z8xMQo1IJqBuEpGvpW3Ow1OQ'
-    );
-    //($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout2.my.localhost.sfdcdev.site.com:7443', {}, null, document.getElementById('lightningout1')]
-  }
-</script>
-
-<script onload="loadIframe()" src="https://authlout1.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.iframe.js"></script>
-<script>
-    //document.addEventListener("LightningOutLoaded", e => $Lightning.createComponent("c:lightningOutTestCMP",{},"elemStore"));
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv='cache-control' content='no-cache'> 
+        <meta http-equiv='expires' content='0'> 
+        <meta http-equiv='pragma' content='no-cache'>
+        
+        <script src="https://shritestdevint-dev-ed.my.site.com/Partners/lightning/lightning.out.js"></script>
+    </head>
     
-    //($Lightning = window.$Lightning || {}).data = ['c:exampleComponentLOApp', 'https://authlout2.my.localhost.sfdcdev.site.com:7443', {}, "https://damien-quintal.github.io/public/iframe.css", document.getElementById('lightningout1'), new Promise((myResolve) => myResolve("00Dxx0000006HS3!AQEAQI3oKoym6PPnv6aW.JiXlkqc7Wd4nVx3AGk6Ak36APR0tNLW74sig88JDaPnLq1s_TjDMN2h4Jk8ogQoGshPDsL1_FSS"))]
-</script>-->
-</body>
-</html>
+    <body onload="loadLightningOut()">
+        <div data-lightning-out="true"></div>
 
+        <script>
+            function loadLightningOut() {
+                try {
+                    const appName = 'c:LightningOutDemo';
+                    const componentName = 'c:testLightningOutExample';
+                    const lightningEndpoint = 'https://shritestdevint-dev-ed.my.site.com/Partners';
+                    const targetElement = document.querySelector("[data-lightning-out]");
+                    const componentAttributes = {};
+                    const authToken = '00D2x000002PbPP!AQEAQDzvs.cMA4tnel0WVtHkrs.aUetVTGduS3t4gnrnFpHfqi5.FNdg6MIVV2z8ByVhQz.KREY6td6L5CRuMF4cDmBbWlVd';
+                    debugger;
+                    console.log("loadLightningOut");
+                    $Lightning.use("c:lightningOutDemo", function () {
+                        $Lightning.createComponent("c:testLightningOutExample",
+                            {},
+                            targetElement,
+                            function (cmp) { console.log("LWC component was created");}
+                        );
+                    },lightningEndpoint, authToken);
+                } catch(e) {
+                    console.error("Error >> ", e);
+                }
+            }
+        </script>
+    </body>
+</html>

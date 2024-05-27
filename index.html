@@ -1,40 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv='cache-control' content='no-cache'> 
-        <meta http-equiv='expires' content='0'> 
-        <meta http-equiv='pragma' content='no-cache'>
-        
-        <script src="https://shritestdevint-dev-ed.my.site.com/Partners/lightning/lightning.out.js"></script>
-    </head>
-    
-    <body onload="loadLightningOut()">
-        <div data-lightning-out="true"></div>
-
-        <script>
-            function loadLightningOut() {
-                try {
-                    const appName = 'c:LightningOutDemo';
-                    const componentName = 'c:testLightningOutExample';
-                    const lightningEndpoint = 'https://shritestdevint-dev-ed.my.site.com/Partners';
-                    const targetElement = document.querySelector("[data-lightning-out]");
-                    const componentAttributes = {};
-                    const authToken = '00D2x000002PbPP!AQEAQDzvs.cMA4tnel0WVtHkrs.aUetVTGduS3t4gnrnFpHfqi5.FNdg6MIVV2z8ByVhQz.KREY6td6L5CRuMF4cDmBbWlVd';
-                    debugger;
-                    console.log("loadLightningOut");
-                    $Lightning.use("c:lightningOutDemo", function () {
-                        $Lightning.createComponent("c:testLightningOutExample",
-                            {},
-                            targetElement,
-                            function (cmp) { console.log("LWC component was created");}
-                        );
-                    },lightningEndpoint, authToken);
-                } catch(e) {
-                    console.error("Error >> ", e);
+  <body>
+    <script src="https://sid1.my.site-com.dquintal-5ihfgpyiic5n0.wb.crm.dev:6101/lightning/lightning.out.js"></script>
+    <div ng-app="myApp" ng-controller="myCtrl">
+    <p>Lightning Out App Test</p> 
+    <div id="lightningout"></div>  
+    <script>
+      $Lightning.use(
+        'c:LightningOutDependencyApp', // name of the Lightning app
+        function () {
+            $Lightning.createComponent(
+                'c:damoCmp', // top-level component of your app
+                {}, // attributes to set on the component when created
+                'lightningout', // the DOM location to insert the component
+                function (cmp) {
+                  // callback when component is created and active on the page
                 }
-            }
-        </script>
-    </body>
+            );
+        },
+        'https://sid1.my.site-com.dquintal-5ihfgpyiic5n0.wb.crm.dev:6101',
+        '00Dxx0000006GuB!AQEAQEeQk_CZocnMC8dCrjh5HB0FnFJ382hgyiNZWw_NbetrsUedH25kWYnugA8ZywUOKpxuhNUrqmsdKXD9._5HXHKaNyLW' // session ID or OAuthToken
+      );
+    </script>
+  </body>
 </html>

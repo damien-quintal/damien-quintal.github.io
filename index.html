@@ -1,26 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>
-    <script src="https://sid1.lightning.force-com.dquintal-5ihfgpyiic5n0.wb.crm.dev:6101/lightning/lightning.out.js"></script>
+    
     <div ng-app="myApp" ng-controller="myCtrl">
     <p>Lightning Out App Test</p> 
     <div id="lightningout"></div>  
+    <script async src="https://trialorgfarmforu.my.localhost.sfdcdev.site.com:7443/lightning/lightning.out.iframe.uma.js"></script>
     <script>
-      $Lightning.use(
-        'c:LightningOutDependencyApp', // name of the Lightning app
-        function () {
-            $Lightning.createComponent(
-                'c:damoCmp', // top-level component of your app
-                {}, // attributes to set on the component when created
-                'lightningout', // the DOM location to insert the component
-                function (cmp) {
-                  // callback when component is created and active on the page
-                }
-            );
-        },
-        'https://sid1.lightning.force-com.dquintal-5ihfgpyiic5n0.wb.crm.dev:6101',
-        '00Dxx0000006GuB!AQEAQFOlWqPlmUEckiaF5wScsdipHpU4p8pYLzdtFaqLNL9rVdYmsp1UzLyUtFAqIXNj_6rldKC2jPox7i7sl95FrlXdM_UR' // session ID or OAuthToken
-      );
+      ($Lightning = window.$Lightning || {}).data = ["https://trialorgfarmforu.my.localhost.sfdcdev.site.com:7443/lp/landing-page/landing1-MCPKZHMBH6E5EU5FKNPEFY6JFSAQ", document.getElementById("lightningout")]
     </script>
   </body>
 </html>

@@ -2,7 +2,6 @@
 <!DOCTYPE html>
 <html lang="en">
   <body>
-    <div ng-app="myApp" ng-controller="myCtrl">
     <style type='text/css'>
         .embeddedServiceHelpButton .helpButton .uiButton {
             background-color: #005290;
@@ -13,7 +12,7 @@
         }
     </style>
     
-    <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.min.js'></script>
+    <script type='text/javascript' src='https://service.force.com/embeddedservice/5.0/esw.js'></script>
     <script type='text/javascript'>
         var initESW = function(gslbBaseURL) {
             embedded_svc.settings.displayHelpButton = true; //Or false
@@ -49,14 +48,14 @@
                     buttonId: '573SB000001rwQH',
                     baseLiveAgentURL: 'https://d.la3-test1-uswest2-core4.pc-aws.salesforceliveagent.com/chat',
                     eswLiveAgentDevName: 'EmbeddedServiceLiveAgent_Parent04ISB0000002Ga92AE_18fe1d05712',
-                    isOfflineSupportEnabled: false
+                    isOfflineSupportEnabled: true
                 }
             );
         };
     
         if (!window.embedded_svc) {
             var s = document.createElement('script');
-            s.setAttribute('src', 'https://dsb000009ylox2ac.test1.my.pc-rnd.salesforce.com/embeddedservice/5.0/esw.min.js');
+            s.setAttribute('src', 'https://dsb000009ylox2ac.test1.my.pc-rnd.salesforce.com/embeddedservice/5.0/esw.js');
             s.onload = function() {
                 initESW(null);
             };

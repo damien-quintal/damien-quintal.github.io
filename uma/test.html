@@ -1,17 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-  <body>
-    
-    <div ng-app="myApp" ng-controller="myCtrl">
-    <p>Lightning Out App Test</p> 
-    <div id="lightningout"></div>  
-    <script async src="https://lobeta12.my.salesforce-com.dquintal-f9mmbrwdovbc1.wb.crm.dev:6101/lightning/lightning.out.iframe.js"></script>
-    <script>
-        document.addEventListener("LightningOutLoaded", e => alert(`${e.detail.application} is loaded.`));
-        ($Lightning = window.$Lightning || {}).data = ["c:damo", "https://lobeta12.lightning.force-com.dquintal-f9mmbrwdovbc1.wb.crm.dev:6101/", {}, null, document.getElementById("lightningout"),null]
-    </script>
-  </body>
-</html>
 
 <!DOCTYPE html>
 <html lang="en">

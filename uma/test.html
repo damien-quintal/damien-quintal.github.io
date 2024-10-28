@@ -5,10 +5,10 @@
     <div ng-app="myApp" ng-controller="myCtrl">
     <p>Lightning Out App Test</p> 
     <div id="lightningout"></div>  
-    <script async src="https://lo20a.lightning.localhost.sfdcdev.force.com:7443/lightning/lightning.out.iframe.uma.js"></script>
-    <script async src="/public/test.js"></script>
+    <script async src="https://lobeta12.my.salesforce-com.dquintal-f9mmbrwdovbc1.wb.crm.dev:6101/lightning/lightning.out.iframe.js"></script>
     <script>
-      ($Lightning = window.$Lightning || {}).data = ["https://250org-a.test1.preview.pc-rnd.salesforce-experience.com/lp/landing-page/MCWG22BX2QV5FBJFEILPMYKLKTYA", document.getElementById("lightningout")]
+        document.addEventListener("LightningOutLoaded", e => alert(`${e.detail.application} is loaded.`));
+        ($Lightning = window.$Lightning || {}).data = ["c:damo", "https://lobeta12.lightning.force-com.dquintal-f9mmbrwdovbc1.wb.crm.dev:6101/", {}, null, document.getElementById("lightningout"),null]
     </script>
   </body>
 </html>

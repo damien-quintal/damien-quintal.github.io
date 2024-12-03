@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>Third-Party Website</title>
+    </head>
+    <body style="background-color:#ADD8E6">
+        <script type="text/javascript" src="https://damien-quintal.github.io/uma/lo-application.js"></script>
+        <lo-lwr-application id="container" data-url="https://trialorgfarmforu3.my.site-com.sisi-zhang-j34g7vcm333o1.wa.crm.dev:6101/lp/lplo2?embeddedCmp=fragment/z4vegofl6txy3q90qecmlz7ovhl9w5d7e5jtf439cud"></lo-lwr-application>
+
+        <!-- TESTS -->
+        <script>
+            let scriptsLoaded = false;
+            const element = document.getElementById('container');
+            while (!element.ready && !scriptsLoaded) {
+                element.addEventListener('ShowRecaptcha', (event) => {
+                    const form = document.getElementById('form');
+                    form.style.display = 'inline';
+                    const button = document.getElementById('button');
+                    button.addEventListener("click", (event) => {
+                        const inputEl = document.getElementById('returnInput');
+                        const customEvent = new CustomEvent('returnValue', {
+                            detail: {
+                                returnValue: inputEl.value
+                            }
+                        });
+                        element.dispatchEvent(customEvent);
+                        form.style.display = 'none';
+                    });
+                });
+                scriptsLoaded = true;
+            }
+        </script>
+        <div>
+            <div id="form" style="display:none">
+                <label>Return: <input type="text" id="returnInput"/></label>
+                <br />
+                <span>Write XYZ in the input box.</span>
+                <br />
+                <button id="button">Submit</button>
+            </div>
+        </div>
+    </body>
+</html>

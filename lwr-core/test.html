@@ -1,0 +1,28 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <body>
+    <script src="https://lobeta12.my.salesforce-com.dquintal-f9mmbrwdovbc1.wb.crm.dev:6101/lightning/lightning.out.js"></script>
+    <div ng-app="myApp" ng-controller="myCtrl">
+    <p>Lightning Out App Test</p> 
+    <div id="lightningout"></div>  
+    <script>
+      $Lightning.use(
+        'c:authapp', // name of the Lightning app
+        function () {
+          // Callback once framework and app loaded
+          $Lightning.createComponent(
+            'c:damo', // top-level component of your app
+            {}, // attributes to set on the component when created
+            'lightningout', // the DOM location to insert the component
+            function (cmp) {
+              // callback when component is created and active on the page
+            }
+          );
+        },
+        'https://lobeta12.my.salesforce-com.dquintal-f9mmbrwdovbc1.wb.crm.dev:6101',
+        'eyJ0bmsiOiJjb3JlL2RxdWludGFsLWY5bW1icndkb3ZiYzEvMDBEeHgwMHVkN1Jkc2lXRUFSIiwidmVyIjoiMS4wIiwia2lkIjoiQ09SRV9BVEpXVC4wMER4eDAwdWQ3UmRzaVcuMTczMDA3ODg4Mjg2MiIsInR0eSI6InNmZGMtY29yZS10b2tlbiIsInR5cCI6IkpXVCIsImFsZyI6IlJTMjU2In0.eyJzY3AiOiJ3ZWIgaWQgYXBpIiwiYXVkIjpbImh0dHBzOi8vbG9iZXRhMTIubXkuc2FsZXNmb3JjZS1jb20uZHF1aW50YWwtZjltbWJyd2RvdmJjMS53Yi5jcm0uZGV2OjYxMDEiXSwic3ViIjoidWlkOjAwNXh4MDAwMDAxWDd2VkFBUyIsIm5iZiI6MTczMDE3NDcxMiwibXR5Ijoib2F1dGgiLCJzZmkiOiJjYjQzZjhlMzI4ZTcxYmZkYjI5YWY2YzZmMjdmODNkZDZlZjdjZTMzNWFmNzA2OTk5MzEzMTczMDg4MDYzOTExIiwicm9sZXMiOltdLCJpc3MiOiJodHRwczovL2xvYmV0YTEyLm15LnNhbGVzZm9yY2UtY29tLmRxdWludGFsLWY5bW1icndkb3ZiYzEud2IuY3JtLmRldjo2MTAxIiwiaHNjIjpmYWxzZSwiZXhwIjoxNzMwMTc2NTI3LCJpYXQiOjE3MzAxNzQ3MjcsImNsaWVudF9pZCI6IjNNVkc5SGZtNEFXU3NxcHJVNWxkMXR6ZmpZOFZEZ19Yd1l2R1dtd3U0Mi43eXZBOUNMWC5fa1RZNkM2ekFWOFJkQlRLUVMuclRmYUtGZ3RuMjhWZzQifQ.ljQBFdLwZaWG6drjjU4YQmDycs8IGEl6H8pDUODnME6mbBUq2PcDwBvVLVnBBmVaIOQU3VtnuVU2JmdrDIl6S8VudOpf2GAiX7KEK33id7FLHiS-druR8E1mIC4qcdILWsDYvvJSkssg7xhWemBR04TaEeS6fhk5o2OJSGm2ktrM7yXYQBk2TE-3JoTzDTuLzDzVK9YCitbAsa7wk4SyyIUHN40_ujhVICC9dxD_4N3QcZIid_EUIkOjXvKxaDtYxUBO3TVOew6tg_U-z89lZoWyihB2kz2Qrw112L3paz03JYT26v7rfJWCRYSGwF3MW9JN4S3h4AlqP_Itc4o8Jw'
+      );
+    </script>
+  </body>
+</html>
